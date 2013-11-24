@@ -78,5 +78,5 @@ while True:
         a.result = "REJECT"
 
 
-    while True:
+    while not a.complete:
         a.visualize()

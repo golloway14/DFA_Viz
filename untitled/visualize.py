@@ -13,6 +13,7 @@ class Visualizer(object):
         self.states = [0, 4, 3, 7, 1, 5, 2, 6]
         self.state = 0
         self.result = ""
+        self.complete = False
 
     def drawDFA(self, dfa, screen):
         screen.fill((0, 0, 0))
@@ -41,6 +42,7 @@ class Visualizer(object):
             text = font.render(end, 1, (0, 0, 0))
             self.screen.blit(text, (110, 330))
         else:
+            self.complete = True
             if self.result == "ACCEPT":
                 text = font.render(self.result, 1, (0, 255, 0))
             else:
