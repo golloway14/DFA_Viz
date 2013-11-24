@@ -1,4 +1,5 @@
 import sys
+import visualize
 __author__ = 'Samuel'
 states = []
 #comments
@@ -67,3 +68,9 @@ while True:
 
     if win == False:
         print("REJECT")
+
+
+    a = visualize.Visualizer()
+
+    while True:
+        a.visualize()

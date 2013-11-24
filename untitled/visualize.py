@@ -10,9 +10,8 @@ class Visualizer(object):
         pygame.init()
         size = (600, 600) #(width, height)
         self.screen = pygame.display.set_mode(size)
-        self.states = [0, 4, 6, 3, 1, 5, 2]
+        self.states = [0, 4, 3, 7, 1, 5, 2, 6]
         self.state = 0
-        self.phase = 0
 
     def drawDFA(self, dfa, screen):
         screen.fill((0, 0, 0))
@@ -49,10 +48,6 @@ class Visualizer(object):
                 if self.state > len(self.states) -1:
                     self.state = 0
 
-        self.drawDFA([1, 1, 1, 1, 1, 1, 1], self.screen)
+        self.drawDFA([1, 1, 1, 1, 1, 1, 1, 1], self.screen)
         pygame.display.flip()
 
-a = Visualizer()
-
-while True:
-    a.visualize()
