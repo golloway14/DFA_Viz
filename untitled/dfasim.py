@@ -62,18 +62,21 @@ while True:
         i += 1
 
     print(sequence)
+
+    a = visualize.Visualizer()
+
     win = False
     for acceptstates in accepts:
         if int(acceptstates) == currNode:
             print("ACCEPT")
+            a.result = "ACCEPT"
             win = True
             break
 
     if win == False:
         print("REJECT")
+        a.result = "REJECT"
 
-
-    a = visualize.Visualizer()
 
     while True:
         a.visualize()
