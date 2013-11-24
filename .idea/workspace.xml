@@ -3,12 +3,13 @@
   <component name="ChangeListManager">
     <list default="true" id="173e248e-2b3c-4d16-bc00-76c69d548c9d" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/untitled/dfasim.py" afterPath="$PROJECT_DIR$/untitled/dfasim.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/untitled/visualize.py" afterPath="$PROJECT_DIR$/untitled/visualize.py" />
     </list>
     <ignored path="DFA_Viz.iws" />
     <ignored path=".idea/workspace.xml" />
     <file path="/Dummy.txt" changelist="173e248e-2b3c-4d16-bc00-76c69d548c9d" time="1385261391002" ignored="false" />
-    <file path="/visualize.py" changelist="173e248e-2b3c-4d16-bc00-76c69d548c9d" time="1385277632934" ignored="false" />
-    <file path="/dfasim.py" changelist="173e248e-2b3c-4d16-bc00-76c69d548c9d" time="1385277999169" ignored="false" />
+    <file path="/visualize.py" changelist="173e248e-2b3c-4d16-bc00-76c69d548c9d" time="1385278595025" ignored="false" />
+    <file path="/dfasim.py" changelist="173e248e-2b3c-4d16-bc00-76c69d548c9d" time="1385278609298" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -31,7 +32,7 @@
       <file leaf-file-name="dfasim.py" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/untitled/dfasim.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="75" column="0" selection-start="2141" selection-end="2141" vertical-scroll-proportion="0.77099234">
+            <state line="78" column="21" selection-start="2190" selection-end="2190" vertical-scroll-proportion="0.77099234">
               <folding>
                 <element signature="e#0#10#0" expanded="true" />
               </folding>
@@ -42,7 +43,7 @@
       <file leaf-file-name="visualize.py" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/untitled/visualize.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="51" column="40" selection-start="1889" selection-end="1889" vertical-scroll-proportion="0.0">
+            <state line="44" column="32" selection-start="1620" selection-end="1620" vertical-scroll-proportion="0.0">
               <folding>
                 <element signature="e#21#34#0" expanded="true" />
               </folding>
@@ -370,7 +371,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/untitled/visualize.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="51" column="40" selection-start="1889" selection-end="1889" vertical-scroll-proportion="0.0">
+        <state line="44" column="32" selection-start="1620" selection-end="1620" vertical-scroll-proportion="0.0">
           <folding>
             <element signature="e#21#34#0" expanded="true" />
           </folding>
@@ -379,7 +380,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/untitled/dfasim.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="75" column="0" selection-start="2141" selection-end="2141" vertical-scroll-proportion="0.77099234">
+        <state line="78" column="21" selection-start="2190" selection-end="2190" vertical-scroll-proportion="0.77099234">
           <folding>
             <element signature="e#0#10#0" expanded="true" />
           </folding>
