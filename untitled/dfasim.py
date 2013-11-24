@@ -40,7 +40,10 @@ print(states)
 accepts = raw_input("ok now it would be just grand if you could say witch"
                     "states are the accept states: ")
 while True:
-    string = raw_input("so now you should give a string for us to run: ")
+    string = raw_input("so now you should give a string for us to run\n"
+                       "if you don't want to run a string type done: ")
+    if "DONE" == string:
+        break
     print("lets see this bad boy run")
     length = len(string)
     i = 0
