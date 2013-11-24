@@ -45,6 +45,7 @@ while True:
     if "DONE" == string:
         break
     print("lets see this bad boy run")
+    a.string = string
     length = len(string)
     i = 0
     sequence = []

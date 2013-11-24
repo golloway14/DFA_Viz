@@ -14,6 +14,7 @@ class Visualizer(object):
         self.state = 0
         self.result = ""
         self.complete = False
+        self.string = ""
 
     def drawDFA(self, dfa, screen):
         screen.fill((0, 0, 0))
