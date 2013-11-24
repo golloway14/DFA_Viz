@@ -10,7 +10,7 @@ class Visualizer(object):
         pygame.init()
         size = (600, 600) #(width, height)
         self.screen = pygame.display.set_mode(size)
-        self.states = [0, 4, 4, 3, 1, 5, 2]
+        self.states = [0, 4, 6, 3, 1, 5, 2]
         self.state = 0
         self.phase = 0
 
@@ -42,14 +42,17 @@ class Visualizer(object):
         pygame.display.update()
 
     def visualize(self):
-        while True:
-            for event in pygame.event.get():
-                if event.type == pygame.QUIT: sys.exit()
-                elif event.type == pygame.MOUSEBUTTONDOWN:
-                    self.state += 1
+        for event in pygame.event.get():
+            if event.type == pygame.QUIT: sys.exit()
+            elif event.type == pygame.MOUSEBUTTONDOWN:
+                self.state += 1
+                if self.state > len(self.states) -1:
+                    self.state = 0
 
-            self.drawDFA([1, 1, 1, 1, 1, 1, 1], self.screen)
-            pygame.display.flip()
+        self.drawDFA([1, 1, 1, 1, 1, 1, 1], self.screen)
+        pygame.display.flip()
 
 a = Visualizer()
-a.visualize()
+
+while True:
+    a.visualize()
