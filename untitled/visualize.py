@@ -15,6 +15,7 @@ class Visualizer(object):
         self.result = ""
         self.complete = False
         self.string = ""
+        self.index = 0
 
     def drawDFA(self, dfa, screen):
         screen.fill((0, 0, 0))
@@ -26,7 +27,8 @@ class Visualizer(object):
             text = font.render(str(x), 1, (0, 0, 0))
             screen.blit(text, (SPOTS[x][0]*125, SPOTS[x][1]*125))
 
-        self.drawString("samw","i","segamgee")
+        self.procString(self.string)
+        #self.drawString("samw","i","segamgee")
 
     def drawString(self, begin, read, end):
         color = pygame.Color(255, 255, 255)
@@ -34,13 +36,16 @@ class Visualizer(object):
 
         font = pygame.font.SysFont("Courier", 17)
         if self.state < (len(self.states) - 1):
-            text = font.render(begin, 1, (0, 0, 0))
+            temp = "Read: " + begin
+            text = font.render(temp, 1, (0, 0, 0))
             self.screen.blit(text, (110, 250))
 
-            text = font.render(read, 1, (255, 0, 0))
+            temp = "Reading: " + read
+            text = font.render(temp, 1, (255, 0, 0))
             self.screen.blit(text, (110, 290))
 
-            text = font.render(end, 1, (0, 0, 0))
+            temp = "Unread: " + end
+            text = font.render(temp, 1, (0, 0, 0))
             self.screen.blit(text, (110, 330))
         else:
             self.complete = True
@@ -51,10 +56,17 @@ class Visualizer(object):
             self.screen.blit(text, (110, 250))
         pygame.display.update()
 
+    def procString(self, string):
+        if len(string) > self.index:
+            self.drawString(string[0:self.index], string[self.index:self.index+1], string[self.index+1:len(string)])
+        else:
+            self.drawString("","","")
+
     def visualize(self):
         for event in pygame.event.get():
             if event.type == pygame.QUIT: pygame.display.quit()
             elif event.type == pygame.MOUSEBUTTONDOWN:
+                self.index += 1
                 self.state += 1
                 if self.state > len(self.states) -1:
                     self.state = 0

@@ -45,7 +45,7 @@ while True:
     if "DONE" == string:
         break
     print("lets see this bad boy run")
-    a.string = string
+
     length = len(string)
     i = 0
     sequence = []
@@ -66,6 +66,7 @@ while True:
 
     a = visualize.Visualizer()
     a.states = sequence
+    a.string = string
     win = False
     for acceptstates in accepts:
         if int(acceptstates) == currNode:
