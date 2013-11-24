@@ -7,7 +7,7 @@
     <ignored path="DFA_Viz.iws" />
     <ignored path=".idea/workspace.xml" />
     <file path="/Dummy.txt" changelist="173e248e-2b3c-4d16-bc00-76c69d548c9d" time="1385261391002" ignored="false" />
-    <file path="/visualize.py" changelist="173e248e-2b3c-4d16-bc00-76c69d548c9d" time="1385264343457" ignored="false" />
+    <file path="/visualize.py" changelist="173e248e-2b3c-4d16-bc00-76c69d548c9d" time="1385266072549" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -39,8 +39,10 @@
       <file leaf-file-name="visualize.py" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/untitled/visualize.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="18" column="16" selection-start="510" selection-end="510" vertical-scroll-proportion="0.6870229">
-              <folding />
+            <state line="24" column="28" selection-start="777" selection-end="777" vertical-scroll-proportion="0.38931298">
+              <folding>
+                <element signature="e#21#34#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -312,8 +314,10 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/untitled/visualize.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="18" column="16" selection-start="510" selection-end="510" vertical-scroll-proportion="0.6870229">
-          <folding />
+        <state line="24" column="28" selection-start="777" selection-end="777" vertical-scroll-proportion="0.38931298">
+          <folding>
+            <element signature="e#21#34#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
