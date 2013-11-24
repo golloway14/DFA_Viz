@@ -64,7 +64,7 @@ while True:
     print(sequence)
 
     a = visualize.Visualizer()
-
+    a.states = sequence
     win = False
     for acceptstates in accepts:
         if int(acceptstates) == currNode:
