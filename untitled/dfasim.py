@@ -6,7 +6,6 @@ print("give us a state!!!!!!!!! \n" +
        "but do it though in this format please though"
        "('charThatIsRead','numOfStateToGoTo'),('charThatIsRead','numOfStateToGoTo');")
 
-
 b = 0
 while b < 8:
     user_input = input("enter some word swag: ")
