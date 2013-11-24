@@ -8,7 +8,7 @@ print("give us a state!!!!!!!!! \n" +
 
 b = 0
 while b < 8:
-    user_input = input("enter some word swag: ")
+    user_input = raw_input("enter some word swag: ")
     print("you defs said "+ user_input)
     if user_input == "done":
         break
@@ -36,21 +36,34 @@ while b < 8:
 
 print("this is what my graphs looks like ")
 print(states)
-string = input("so now you should give a string for us to run: ")
-print("lets see this bad boy run")
-length = len(string)
-i = 0
-sequence = []
-currNode = 0
-sequence.append(currNode)
+accepts = raw_input("ok now it would be just grand if you could say witch"
+                    "states are the accept states: ")
+while True:
+    string = raw_input("so now you should give a string for us to run: ")
+    print("lets see this bad boy run")
+    length = len(string)
+    i = 0
+    sequence = []
+    currNode = 0
+    sequence.append(currNode)
 
-while i < length:
-    state = states[currNode]
-    for trans in state:
-        if string[i] == trans[0]:
-            currNode = trans[1]
-            sequence.append(currNode)
+    while i < length:
+        state = states[currNode]
+        for trans in state:
+            if string[i] == trans[0]:
+                currNode = trans[1]
+                sequence.append(currNode)
+                break
+        print("to ", currNode, "by ", string[i])
+        i += 1
+
+    print(sequence)
+    win = False
+    for acceptstates in accepts:
+        if int(acceptstates) == currNode:
+            print("ACCEPT")
+            win = True
             break
-    print("to ", currNode, "by ", string[i])
-    i += 1
 
+    if win == False:
+        print("REJECT")
