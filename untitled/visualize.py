@@ -12,6 +12,7 @@ class Visualizer(object):
         self.screen = pygame.display.set_mode(size)
         self.states = [0, 4, 3, 7, 1, 5, 2, 6]
         self.state = 0
+        self.result = ""
 
     def drawDFA(self, dfa, screen):
         screen.fill((0, 0, 0))
@@ -30,19 +31,26 @@ class Visualizer(object):
         pygame.draw.rect(self.screen, color, (110, 250, 380, 100), 0)
 
         font = pygame.font.SysFont("Courier", 17)
-        text = font.render(begin, 1, (0, 0, 0))
-        self.screen.blit(text, (110, 250))
+        if self.state < (len(self.states) - 1):
+            text = font.render(begin, 1, (0, 0, 0))
+            self.screen.blit(text, (110, 250))
 
-        text = font.render(read, 1, (255, 0, 0))
-        self.screen.blit(text, (110, 290))
+            text = font.render(read, 1, (255, 0, 0))
+            self.screen.blit(text, (110, 290))
 
-        text = font.render(end, 1, (0, 0, 0))
-        self.screen.blit(text, (110, 330))
+            text = font.render(end, 1, (0, 0, 0))
+            self.screen.blit(text, (110, 330))
+        else:
+            if self.result == "ACCEPT":
+                text = font.render(self.result, 1, (0, 255, 0))
+            else:
+                text = font.render(self.result, 1, (255, 0, 0))
+            self.screen.blit(text, (110, 250))
         pygame.display.update()
 
     def visualize(self):
         for event in pygame.event.get():
-            if event.type == pygame.QUIT: sys.exit()
+            if event.type == pygame.QUIT: pygame.display.quit()
             elif event.type == pygame.MOUSEBUTTONDOWN:
                 self.state += 1
                 if self.state > len(self.states) -1:
