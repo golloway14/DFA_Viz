@@ -3,14 +3,13 @@ import visualize
 __author__ = 'Samuel'
 states = []
 #comments
-print("give us a state!!!!!!!!! \n" +
-       "but do it though in this format please though"
+print("give us a state! \n" +
+       "In this format"
        "('charThatIsRead','numOfStateToGoTo'),('charThatIsRead','numOfStateToGoTo');")
 
 b = 0
 while b < 8:
-    user_input = raw_input("enter some word swag: ")
-    print("you defs said "+ user_input)
+    user_input = raw_input("enter a State or type done: ")
     if user_input == "done":
         break
     dirGraph = []
@@ -31,14 +30,13 @@ while b < 8:
         dirGraph.append(state)
         i += 1
     states.append(dirGraph)
-    print("this is what your state kinda looks like")
+    print("this is what your state looks like")
     print(dirGraph)
     b += 1
 
 print("this is what my graphs looks like ")
 print(states)
-accepts = raw_input("ok now it would be just grand if you could say witch"
-                    "states are the accept states: ")
+accepts = raw_input("now designate the accept states: ")
 while True:
     string = raw_input("so now you should give a string for us to run\n"
                        "if you don't want to run a string type done: ")
